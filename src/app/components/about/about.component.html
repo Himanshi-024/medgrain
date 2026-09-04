@@ -1,0 +1,185 @@
+<!-- <section id="about" class="section about">
+  <div class="container">
+    <div class="about__intro">
+      <div appReveal>
+        <p class="eyebrow">About Medgrain</p>
+        <h2>Better Wheat. Better Flour. Better Everyday Meals.</h2>
+        <p class="about__lead">
+          Medgrain Flour is manufactured and marketed by <strong>Sustainzy Agro Industries LLP</strong>,
+          focused on quality wheat flour, consistent processing, hygienic manufacturing and reliable supply.
+        </p>
+        <p>
+          We combine carefully selected wheat with modern processing practices to produce flour suitable for
+          everyday household consumption as well as retail, wholesale and bulk requirements.
+        </p>
+        <blockquote class="about__quote">“From carefully selected grains to your kitchen — quality you can trust in every pack.”</blockquote>
+      </div>
+
+      <aside class="brand-card" [appReveal]="120">
+        <img src="assets/images/sustainzy-logo.webp" alt="Sustainzy Agro Industries LLP" width="96" height="96" loading="lazy" />
+        <span>Our Brand</span>
+        <h3>MEDGRAIN FLOUR</h3>
+        <p>Manufactured &amp; marketed by</p>
+        <strong>Sustainzy Agro Industries LLP</strong>
+        <div class="brand-card__locations">
+          <span><b>Registered Office</b>Indore, Madhya Pradesh</span>
+          <span><b>Manufacturing</b>Betul, Madhya Pradesh</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="packaging" appReveal>
+      <div class="packaging__text">
+        <p class="eyebrow">From Our Home to Yours</p>
+        <h3>Quality that looks as good as it feels.</h3>
+        <p>Our packaging reference reflects the clean, natural Medgrain identity — green, wheat-gold and warm flour tones.</p>
+        <p class="about__hindi">शुद्धता • गुणवत्ता • भरोसा</p>
+      </div>
+      <div class="packaging__shots">
+        <img src="assets/images/packaging.webp" alt="Medgrain Wheat Flour packaging" width="640" height="360" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="leadership">
+      <div class="section-head" appReveal>
+        <p class="eyebrow">Founder’s Messages</p>
+        <h2>Experience behind every decision.</h2>
+        <p>Our leadership brings together quality, production, agricultural, legal, purchase and documentation expertise.</p>
+      </div>
+
+      <div class="founder-grid">
+        <article class="founder-card" *ngFor="let founder of founders; let i = index" [appReveal]="i * 100">
+          <div class="founder-card__photo">
+            <span>Founder photo</span>
+            <small>Image will be added here</small>
+          </div>
+          <div class="founder-card__content">
+            <p class="eyebrow">A Word from Our Co-Founder</p>
+            <h3>{{ founder.title }}</h3>
+            <p class="founder-card__quote">“{{ founder.quote }}”</p>
+            <p class="founder-card__experience">{{ founder.experience }}</p>
+            <p>{{ founder.message }}</p>
+            <div class="founder-card__signature">
+              <strong>— {{ founder.name }}</strong>
+              <span>{{ founder.role }}</span>
+              <span>Sustainzy Agro Industries LLP</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about__intro">
+      <div appReveal>
+        <p class="eyebrow">About Medgrain</p>
+        <h2>Better Wheat. Better Flour. Better Everyday Meals.</h2>
+        <p class="about__lead">
+          Medgrain is a flour brand focused on quality wheat flour, consistent processing,
+          hygienic manufacturing and reliable supply for everyday and business requirements.
+        </p>
+        <p>
+          We combine carefully selected wheat with modern processing practices to produce flour suitable for
+          everyday household consumption as well as retail, wholesale and bulk requirements.
+        </p>
+        <blockquote class="about__quote">“From carefully selected grains to your kitchen — quality you can trust in
+          every pack.”</blockquote>
+      </div>
+
+      <aside class="brand-card" [appReveal]="120">
+        <img src="assets/images/sustainzy-logo.webp" alt="Sustainzy Agro Industries LLP" width="96" height="96"
+          loading="lazy" />
+        <span>Our Brand</span>
+        <h3>MEDGRAIN FLOUR</h3>
+        <p>Quality wheat flour for everyday Indian kitchens and business requirements.</p>
+      </aside>
+    </div>
+
+    <div class="packaging" appReveal>
+      <div class="packaging__text">
+        <p class="eyebrow">From Our Home to Yours</p>
+        <h3>Quality that looks as good as it feels.</h3>
+        <p>Our packaging reflects the clean, natural Medgrain identity — green, wheat-gold and warm flour tones.</p>
+        <p class="about__hindi">शुद्धता • गुणवत्ता • भरोसा</p>
+      </div>
+      <div class="packaging__shots">
+        <img src="assets/images/packaging.webp" alt="Medgrain Wheat Flour packaging" width="1280" height="720"
+          loading="lazy" />
+      </div>
+    </div>
+
+    <div class="leadership">
+      <div class="section-head" appReveal>
+        <p class="eyebrow">Founder’s Messages</p>
+        <h2>Experience behind every decision.</h2>
+        <p>Quality, production and agricultural expertise come together to shape how Medgrain is built and operated.</p>
+      </div>
+
+      <!-- <div class="founder-grid">
+        <article class="founder-card" *ngFor="let founder of founders; let i = index" [appReveal]="i * 100">
+          <div class="founder-card__photo">
+            <img src="i==0 ? 'assets/images/founders/ deepak-sahu.jpeg': i==1 ? 'assets/images/founders/ankit-mishra.jpeg': 'assets/images/founders/devendra-singh.jpeg'"
+              [alt]="founder.name" loading="lazy"/>
+          </div>
+          <div class="founder-card__content">
+            <p class="eyebrow">{{ founder.heading }}</p>
+            <h3>{{ founder.title }}</h3>
+            <p class="founder-card__quote">“{{ founder.quote }}”</p>
+            <p class="founder-card__experience">{{ founder.experience }}</p>
+            <p>{{ founder.message }}</p>
+            <div class="founder-card__signature">
+              <strong>— {{ founder.name }}</strong>
+              <span>{{ founder.role }}</span>
+              <span>Sustainzy Agro Industries LLP</span>
+            </div>
+          </div>
+        </article>
+      </div> -->
+
+      <div class="founder-grid">
+
+        <article class="founder-card" *ngFor="let founder of founders; let i = index" [appReveal]="i * 100">
+
+          <div class="founder-card__photo">
+            <img [src]="
+          i === 0
+            ? 'assets/images/founders/deepak-sahu.jpg'
+            : i === 1
+              ? 'assets/images/founders/ankit-mishra.jpg'
+              : 'assets/images/founders/devendra-singh.jpg'
+        " [alt]="founder.name" loading="lazy" />
+          </div>
+
+          <div class="founder-card__content">
+            <p class="eyebrow">{{ founder.heading }}</p>
+
+            <h3>{{ founder.title }}</h3>
+
+            <p class="founder-card__quote">
+              “{{ founder.quote }}”
+            </p>
+
+            <p class="founder-card__experience">
+              {{ founder.experience }}
+            </p>
+
+            <p>{{ founder.message }}</p>
+
+            <div class="founder-card__signature">
+              <strong>— {{ founder.name }}</strong>
+              <span>{{ founder.role }}</span>
+              <span>Sustainzy Agro Industries LLP</span>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>

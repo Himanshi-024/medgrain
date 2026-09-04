@@ -1,0 +1,104 @@
+<!-- <section id="top" class="hero">
+  <div class="hero__slides" aria-hidden="true">
+    <div class="hero__slide" *ngFor="let slide of slides; let i = index" [class.is-active]="i === activeSlide"
+      [style.background-image]="'url(' + slide + ')'">
+    </div>
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__brand-line">
+        <img src="assets/images/medgrain-mark.webp" alt="Medgrain" width="62" height="62" />
+        <div>
+          <span>MEDGRAIN FLOUR</span>
+          <small>Manufactured &amp; marketed by Sustainzy Agro Industries LLP</small>
+        </div>
+      </div>
+
+      <p class="eyebrow eyebrow--light">Pure Wheat • Everyday Trust</p>
+      <h1>Pure Wheat.<br /><span>Quality You Can Trust.</span></h1>
+      <p class="hero__sub">
+        Quality wheat flour manufactured with care for everyday Indian kitchens, retail,
+        wholesale and bulk requirements.
+      </p>
+      <p class="hero__hindi">हर घर के लिए भरोसेमंद आटा <b>•</b> हर पैक में गुणवत्ता</p>
+
+      <div class="hero__packs">
+        <span class="hero__packs-label">Available in</span>
+        <span class="hero__packs-list">
+          <span *ngFor="let size of packSizes" class="hero__pack-chip">{{ size }}</span>
+        </span>
+      </div>
+
+      <div class="hero__actions">
+        <a href="https://wa.me/919752928882?text=Hi%20Medgrain%2C%20I%20want%20product%20details." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order on WhatsApp</a>
+        <a href="#business" class="btn btn-ghost-light">Become a Distributor</a>
+      </div>
+
+      <div class="hero__trust">
+        <span>✓ FSSAI Licensed</span>
+        <span>✓ Hygienic Manufacturing</span>
+        <span>✓ Reliable Supply</span>
+      </div>
+
+      <dl class="hero__stats">
+        <div *ngFor="let s of stats">
+          <dt>{{ s.value }}{{ s.suffix }}</dt>
+          <dd>{{ s.label }}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+</section> -->
+
+
+
+<section id="top" class="hero">
+  <div class="hero__backdrop" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__brand-line">
+        <img src="assets/images/medgrain-mark.webp" alt="Medgrain" width="88" height="88" />
+        <div>
+          <span>OUR BRAND: MEDGRAIN FLOUR</span>
+          <small>Manufactured and marketed by Sustainzy Agro Industries LLP</small>
+        </div>
+      </div>
+
+      <p class="eyebrow eyebrow--light">Pure Wheat • Everyday Trust</p>
+      <h1>Pure Wheat.<br /><span>Quality You Can Trust.</span></h1>
+      <p class="hero__sub">
+        Quality wheat flour manufactured with care for everyday Indian kitchens, retail,
+        wholesale and bulk requirements.
+      </p>
+      <p class="hero__hindi">हर घर के लिए भरोसेमंद आटा • हर पैक में गुणवत्ता</p>
+
+      <div class="hero__actions">
+        <a href="https://wa.me/919752928882?text=Hi%20Medgrain%2C%20I%20want%20product%20details." target="_blank"
+          rel="noopener noreferrer" class="btn btn-primary">Order on WhatsApp</a>
+        <a href="#business" class="btn btn-ghost-light">Become a Distributor</a>
+      </div>
+
+      <div class="hero__trust">
+        <span>✓ FSSAI Licensed</span>
+        <span>✓ Hygienic Manufacturing</span>
+        <span>✓ Reliable Supply</span>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-label="Medgrain flour product presentation">
+      <div class="hero__visual-frame">
+        <img *ngFor="let slide of slides; let i = index" [src]="slide"
+          [alt]="i === activeSlide ? 'Medgrain Flour product' : ''" [class.is-active]="i === activeSlide" width="1244"
+          height="700" [attr.loading]="i === 0 ? 'eager' : 'lazy'" />
+      </div>
+      <div class="hero__visual-caption">
+        <span>Medgrain Flour</span>
+        <small>Quality wheat flour for homes and business requirements</small>
+      </div>
+    </div>
+  </div>
+</section>

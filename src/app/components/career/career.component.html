@@ -1,0 +1,69 @@
+<section id="career" class="section career">
+    <div class="career__glow"></div>
+    <div class="container">
+        <div class="section-head career__head" appReveal>
+            <p class="eyebrow">Careers &amp; Opportunities</p>
+            <h2>Build your future with Medgrain.</h2>
+            <p class="career__sub">
+                Are you interested or searching for quality Atta? Explore career opportunities with Medgrain,
+                and get a direct reply on WhatsApp — all in one place.
+            </p>
+        </div>
+
+        <div class="career-grid">
+            <!-- Job Postings -->
+            <div class="career-card" appReveal>
+                <div class="career-card__icon career-card__icon--jobs">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"
+                            stroke="currentColor" stroke-width="1.6" />
+                        <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M4 12h16" stroke="currentColor" stroke-width="1.6" />
+                    </svg>
+                </div>
+                <h3>Career Opportunities</h3>
+                <p class="career-card__desc">We're hiring across our Indore &amp; Betul operations. Apply directly on
+                    WhatsApp.</p>
+
+                <ul class="job-list">
+                    <li class="job-list__item" *ngFor="let job of jobs">
+                        <div class="job-list__info">
+                            <span class="job-list__title">{{ job.title }}</span>
+                            <span class="job-list__meta">{{ job.location }} · {{ job.type }}</span>
+                        </div>
+                        <a [href]="jobApplyLink(job)" target="_blank" rel="noopener" class="job-list__apply"
+                            [attr.aria-label]="'Apply for ' + job.title + ' on WhatsApp'">
+                            Apply
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Direct WhatsApp Inquiry -->
+            <div class="career-card career-card--whatsapp" [appReveal]="240">
+                <div class="career-card__icon career-card__icon--whatsapp">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.5 11.9c0 4.7-3.9 8.5-8.6 8.5-1.5 0-2.9-.4-4.1-1.1L3 20.5l1.2-4.6a8.4 8.4 0 0 1-1.3-4.5C2.9 6.7 6.7 3 11.4 3s9.1 3.9 9.1 8.9Z"
+                            stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                        <path
+                            d="M8.3 8.6c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.5.2.5.6 1.6.7 1.7.1.1.1.3 0 .5-.1.2-.2.3-.4.5-.2.2-.4.4-.2.7.2.4.9 1.4 1.9 2.2 1.3 1.1 2.3 1.4 2.7 1.6.4.2.6.1.8-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 2 .9 2.3 1.1.3.2.5.3.6.4.1.2.1.9-.2 1.6-.3.7-1.6 1.4-2.3 1.5-.6.1-1.3.1-4.1-1.1-3.4-1.5-5.6-4.9-5.8-5.1-.2-.2-1.4-1.8-1.4-3.4 0-1.6.9-2.4 1.2-2.7Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <h3>Have a Question? Ask on WhatsApp</h3>
+                <p class="career-card__desc">
+                    Skip the form — chat with our team directly for pricing, bulk orders, distributorship or any query.
+                    Get a quick reply from our team.
+                </p>
+                <a [href]="generalWhatsappLink" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path
+                            d="M20.5 11.9c0 4.7-3.9 8.5-8.6 8.5-1.5 0-2.9-.4-4.1-1.1L3 20.5l1.2-4.6a8.4 8.4 0 0 1-1.3-4.5C2.9 6.7 6.7 3 11.4 3s9.1 3.9 9.1 8.9Z" />
+                    </svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

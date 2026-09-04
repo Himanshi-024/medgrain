@@ -1,0 +1,64 @@
+.cine {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cine__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/packaging.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cine__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(32, 36, 29, 0.72), rgba(43, 59, 34, 0.8));
+}
+
+.cine__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 90px 24px;
+}
+
+.cine__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(24px, 3.6vw, 40px);
+  color: var(--husk);
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.cine__attribution {
+  display: block;
+  margin-top: 24px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wheat-light);
+}
+
+@media (max-width: 700px) {
+  .cine__bg {
+    background-attachment: scroll;
+  }
+}
+
+.cine {
+  min-height: 40vh;
+}
+
+.cine__inner {
+  padding: 64px 20px;
+}

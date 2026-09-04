@@ -1,0 +1,166 @@
+<!-- <section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Products</p>
+      <h2>Grain to flour, made for every kitchen</h2>
+      <p>From everyday atta to specialty grain flours — ideal for homes, restaurants, hotels, caterers and institutions.
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card" [class.product-card--featured]="p.image" *ngFor="let p of products; let i = index"
+        [appReveal]="(i % 3) * 120">
+        <img *ngIf="p.image" [src]="p.image" [alt]="p.name" class="product-card__img" />
+        <div class="product-card__top">
+          <span class="product-card__tag">{{ p.tag }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="product-card__packs" *ngIf="p.packs">
+          <span *ngFor="let size of p.packs" class="pack-chip">{{ size }}</span>
+        </div>
+
+        <ul class="product-card__uses" *ngIf="p.uses">
+          <li *ngFor="let u of p.uses">{{ u }}</li>
+        </ul>
+
+        <a href="#contact" class="product-card__link">Enquire Now →</a>
+      </article>
+    </div>
+  </div>
+</section>  -->
+<!-- 
+<section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Products</p>
+      <h2>Grain to flour, made for every kitchen</h2>
+      <p>From everyday atta to specialty grain flours, spices and snacks — ideal for homes, restaurants, hotels,
+        caterers and institutions.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card" [class.product-card--featured]="p.image" *ngFor="let p of products; let i = index"
+        [appReveal]="(i % 3) * 120">
+        <img *ngIf="p.image" [src]="p.image" [alt]="p.name" class="product-card__img" />
+        <div class="product-card__top">
+          <span class="product-card__tag">{{ p.tag }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="product-card__packs" *ngIf="p.packs">
+          <span *ngFor="let size of p.packs" class="pack-chip">{{ size }}</span>
+        </div>
+
+        <ul class="product-card__uses" *ngIf="p.uses">
+          <li *ngFor="let u of p.uses">{{ u }}</li>
+        </ul>
+
+        <a href="#contact" class="product-card__link">Enquire Now →</a>
+      </article>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Products</p>
+      <h2>Grain to flour, made for every kitchen</h2>
+      <p>From everyday atta to specialty grain flours — ideal for homes, restaurants, hotels, caterers and institutions.
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card" [class.product-card--featured]="p.image" *ngFor="let p of products; let i = index"
+        [appReveal]="(i % 3) * 120">
+        <img *ngIf="p.image" [src]="p.image" [alt]="p.name" class="product-card__img" />
+        <div class="product-card__top">
+          <span class="product-card__tag">{{ p.tag }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="product-card__packs" *ngIf="p.packs">
+          <span *ngFor="let size of p.packs" class="pack-chip">{{ size }}</span>
+        </div>
+
+        <ul class="product-card__uses" *ngIf="p.uses">
+          <li *ngFor="let u of p.uses">{{ u }}</li>
+        </ul>
+
+        <a href="#contact" class="product-card__link">Enquire Now →</a>
+      </article>
+    </div>
+  </div>
+</section> -->
+
+<!-- 
+<section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Products</p>
+      <h2>Grain to flour, made for every kitchen</h2>
+      <p>From everyday atta to specialty grain flours, spices and snacks — ideal for homes, restaurants, hotels,
+        caterers and institutions.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card" [class.product-card--featured]="p.image" *ngFor="let p of products; let i = index"
+        [appReveal]="(i % 3) * 120">
+        <div class="product-card__img-wrap" *ngIf="p.image">
+          <img [src]="p.image" [alt]="p.name" class="product-card__img" loading="lazy" width="1244" height="700" />
+        </div>
+        <div class="product-card__top">
+          <span class="product-card__tag">{{ p.tag }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="product-card__packs" *ngIf="p.packs">
+          <span *ngFor="let size of p.packs" class="pack-chip">{{ size }}</span>
+        </div>
+
+        <ul class="product-card__uses" *ngIf="p.uses">
+          <li *ngFor="let u of p.uses">{{ u }}</li>
+        </ul>
+
+        <a href="#contact" class="product-card__link">Enquire Now →</a>
+      </article>
+    </div>
+  </div>
+</section> -->
+
+
+<section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Product</p>
+      <h2>Medgrain Flour — Available Pack Sizes</h2>
+      <p>Choose the pack size that fits your household, retail, wholesale or bulk requirement.</p>
+    </div>
+
+    <article class="product-showcase" appReveal>
+      <div class="product-showcase__image">
+        <img src="assets/images/packaging.webp" alt="Medgrain Wheat Flour packaging" width="1280" height="720" loading="lazy" />
+      </div>
+      <div class="product-showcase__content">
+        <span class="product-showcase__tag">Medgrain Flour</span>
+        <h3>Quality wheat flour for everyday meals and business requirements.</h3>
+        <p>Carefully selected wheat, hygienic processing and dependable supply — available in practical pack sizes.</p>
+
+        <div class="product-showcase__packs">
+          <div *ngFor="let pack of packSizes" class="pack-option">
+            <strong>{{ pack.size }}</strong>
+            <span>{{ pack.use }}</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Enquire Now</a>
+      </div>
+    </article>
+  </div>
+</section>

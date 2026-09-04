@@ -1,0 +1,29 @@
+<section id="business" class="section business">
+  <div class="container">
+    <div class="business-grid">
+      <div class="business-card business-card--gold" appReveal>
+        <p class="eyebrow">For Retailers &amp; Distributors</p>
+        <h3>Grow your business with Medgrain</h3>
+        <p>
+          Join the growing Medgrain distribution network and offer your customers
+          quality flour products from a trusted Indian brand.
+        </p>
+        <ul class="business-card__list">
+          <li *ngFor="let perk of distributorPerks">{{ perk }}</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Become a Distributor</a>
+      </div>
+
+      <div class="business-card business-card--dark" [appReveal]="150">
+        <p class="eyebrow eyebrow--light">For Restaurants &amp; Food Businesses</p>
+        <h3>Bulk supply for your kitchen</h3>
+        <p>Medgrain supplies quality flour products for:</p>
+        <div class="business-card__tags">
+          <span *ngFor="let f of foodBusinesses">{{ f }}</span>
+        </div>
+        <p class="business-card__note">We offer suitable pack sizes and bulk supply options for business requirements.</p>
+        <a href="#contact" class="btn btn-ghost-light">Request Bulk Enquiry</a>
+      </div>
+    </div>
+  </div>
+</section>

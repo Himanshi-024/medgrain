@@ -1,0 +1,16 @@
+<section id="why" class="section why">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Why Choose Medgrain</p>
+      <h2>Quality you can taste, trust you can rely on</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card" *ngFor="let r of reasons; let i = index" [appReveal]="(i % 3) * 120">
+        <span class="why-card__check">✓</span>
+        <h4>{{ r.title }}</h4>
+        <p>{{ r.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

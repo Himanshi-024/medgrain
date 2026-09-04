@@ -1,0 +1,131 @@
+.manufacturing {
+  position: relative;
+  background: var(--crop-deep);
+  color: var(--husk);
+  overflow: hidden;
+}
+
+.manufacturing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/wheatFlour.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+}
+
+.manufacturing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 59, 34, 0.75), rgba(43, 59, 34, 0.96));
+}
+
+.manufacturing .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-head--light h2 {
+  color: var(--husk);
+}
+
+.section-head--light p {
+  color: rgba(250, 246, 236, 0.72);
+}
+
+.eyebrow--light {
+  color: var(--wheat-light);
+}
+
+.eyebrow--light::before {
+  background: var(--wheat-light);
+}
+
+.journey {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.journey::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: 40px;
+  right: 40px;
+  height: 1px;
+  background: rgba(250, 246, 236, 0.22);
+}
+
+.journey__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.journey__dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--wheat);
+  color: var(--soil);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.journey__label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(250, 246, 236, 0.88);
+  max-width: 120px;
+}
+
+@media (max-width: 900px) {
+  .journey {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .journey::before {
+    top: 0;
+    bottom: 0;
+    left: 21px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .journey__step {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .journey__label {
+    max-width: none;
+  }
+}
+
+.cine {
+  min-height: 40vh;
+}
+
+.cine__inner {
+  padding: 64px 20px;
+}

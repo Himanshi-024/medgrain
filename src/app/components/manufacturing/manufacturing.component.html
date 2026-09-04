@@ -1,0 +1,20 @@
+<section id="manufacturing" class="section manufacturing">
+  <div class="container">
+    <div class="section-head section-head--light" appReveal>
+      <p class="eyebrow eyebrow--light">Our Manufacturing</p>
+      <h2>From grain to pack, every stage matters</h2>
+      <p>
+        At Medgrain, quality begins at the manufacturing stage. Our modern processing
+        facility follows a systematic process, managed at every stage with a focus on
+        quality, hygiene and consistency.
+      </p>
+    </div>
+
+    <ol class="journey">
+      <li class="journey__step" *ngFor="let step of steps; let i = index" [appReveal]="i * 100">
+        <span class="journey__dot">{{ i + 1 }}</span>
+        <span class="journey__label">{{ step }}</span>
+      </li>
+    </ol>
+  </div>
+</section>
