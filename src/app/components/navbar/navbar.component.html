@@ -1,3 +1,27 @@
+<!-- <header class="nav" [class.nav--scrolled]="isScrolled">
+  <div class="scroll-progress" [style.width.%]="scrollProgress"></div>
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo" (click)="closeMenu()" aria-label="Medgrain home">
+      <img src="assets/images/medgrain-mark.webp" alt="Medgrain" class="nav__mark" width="52" height="52" />
+      <span class="nav__word">MEDGRAIN</span>
+    </a>
+
+    <nav class="nav__links" [class.nav__links--open]="isMenuOpen" aria-label="Main navigation">
+      <a href="#top" (click)="closeMenu()">Home</a>
+      <a href="#about" (click)="closeMenu()">About Us</a>
+      <a href="#products" (click)="closeMenu()">Our Products</a>
+      <a href="#why" (click)="closeMenu()">Why Medgrain</a>
+      <a href="#business" (click)="closeMenu()">Distributors</a>
+      <a href="#business" (click)="closeMenu()">Bulk Orders</a>
+      <a href="#contact" class="nav__cta" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <button class="nav__toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header> -->
+
 <header class="nav" [class.nav--scrolled]="isScrolled">
   <div class="scroll-progress" [style.width.%]="scrollProgress"></div>
   <div class="container nav__inner">
@@ -11,6 +35,7 @@
       <a href="#about" (click)="closeMenu()">About Us</a>
       <a href="#products" (click)="closeMenu()">Our Products</a>
       <a href="#why" (click)="closeMenu()">Why Medgrain</a>
+      <a href="#manufacturing" (click)="closeMenu()">Quality</a>
       <a href="#business" (click)="closeMenu()">Distributors</a>
       <a href="#business" (click)="closeMenu()">Bulk Orders</a>
       <a href="#contact" class="nav__cta" (click)="closeMenu()">Contact</a>
