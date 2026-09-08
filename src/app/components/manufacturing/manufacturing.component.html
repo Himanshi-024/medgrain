@@ -1,4 +1,4 @@
-<section id="manufacturing" class="section manufacturing">
+<!-- <section id="manufacturing" class="section manufacturing">
   <div class="container">
     <div class="section-head section-head--light" appReveal>
       <p class="eyebrow eyebrow--light">Our Manufacturing</p>
@@ -16,5 +16,51 @@
         <span class="journey__label">{{ step }}</span>
       </li>
     </ol>
+  </div>
+</section> -->
+
+<section id="manufacturing" class="section manufacturing">
+  <div class="container">
+    <div class="section-head section-head--light" appReveal>
+      <p class="eyebrow eyebrow--light">Quality &amp; Manufacturing</p>
+      <h2>From grain to pack, every stage matters</h2>
+      <p>
+        At Medgrain, quality begins at the manufacturing stage. We follow a systematic process
+        with a focus on responsible handling, hygiene, consistency and dependable supply.
+      </p>
+    </div>
+
+    <div class="quality-commitment" appReveal>
+      <div class="quality-commitment__icon">✓</div>
+      <div>
+        <p class="quality-commitment__eyebrow">Our Quality Commitment</p>
+        <h3>Quality Is Built Into Our Process</h3>
+        <p>
+          Our approach to quality is guided by disciplined processes, careful handling and continuous
+          improvement. From raw material selection to processing, packing and dispatch, we focus on
+          consistency and responsible manufacturing practices.
+        </p>
+      </div>
+    </div>
+
+    <div class="process-heading" appReveal>
+      <p class="eyebrow eyebrow--light">Our Manufacturing &amp; Quality Process</p>
+      <p class="process-heading__note">A clear journey from selected wheat to finished product.</p>
+    </div>
+
+    <ol class="journey">
+      <li class="journey__step" *ngFor="let step of steps; let i = index" [appReveal]="i * 100">
+        <span class="journey__dot">{{ i + 1 }}</span>
+        <span class="journey__label">{{ step }}</span>
+      </li>
+    </ol>
+
+    <div class="compliance-note" appReveal>
+      <div>
+        <strong>Food Safety &amp; Compliance</strong>
+        <p>FSSAI licence details can be displayed here once the verified licence number is provided.</p>
+      </div>
+      <span>FSSAI</span>
+    </div>
   </div>
 </section>
