@@ -127,7 +127,7 @@ export class AboutComponent {
     {
       name: 'Deepak Sahu',
       heading: 'Founder’s Message',
-      role: 'Co-Founder | Quality & Business',
+      role: 'Founder | Quality & Business',
       title: 'A Commitment to Quality, Built on Experience',
       quote: 'Quality is not just a standard we follow — it is the foundation on which Medgrain is built.',
       experience: '10+ years in Quality Control, Quality Assurance, testing and Good Manufacturing Practices (GMP).',
@@ -136,7 +136,7 @@ export class AboutComponent {
     {
       name: 'Ankit Mishra',
       heading: 'A Word from Our Co-Founder',
-      role: 'Co-Founder | Plant Operations & Production',
+      role: 'Founder | Plant Operations & Production',
       title: 'Production Excellence Built on Experience',
       quote: 'Great products are created through disciplined processes, consistent manufacturing and a commitment to excellence.',
       experience: '10+ years in Production, manufacturing operations and Good Manufacturing Practices (GMP).',
@@ -145,7 +145,7 @@ export class AboutComponent {
     {
       name: 'Devendra Singh Shaktawat',
       heading: 'A Word from Our Co-Founder',
-      role: 'Co-Founder | Legal, Purchase & Documentation',
+      role: 'Founder | Legal, Purchase & Documentation',
       title: 'From Agricultural Expertise to Responsible Manufacturing',
       quote: 'Good quality begins with understanding the raw material and maintaining the right practices throughout the journey.',
       experience: '10+ years in Horticulture, agricultural practices and Good Manufacturing Practices (GMP).',
