@@ -137,30 +137,373 @@
 
 <section id="products" class="section products">
   <div class="container">
+
+    <!-- Section Heading -->
     <div class="section-head" appReveal>
-      <p class="eyebrow">Our Product</p>
-      <h2>Medgrain Flour — Available Pack Sizes</h2>
-      <p>Choose the pack size that fits your household, retail, wholesale or bulk requirement.</p>
+      <p class="eyebrow">Our Products</p>
+
+      <h2>Quality Products for Every Requirement</h2>
+
+      <p>
+        Explore our range of carefully selected flour, grain and food products
+        for households, retail, wholesale, institutional and bulk requirements.
+      </p>
     </div>
 
+
+    <!-- Featured Product -->
     <article class="product-showcase" appReveal>
+
       <div class="product-showcase__image">
-        <img src="assets/images/packaging.webp" alt="Medgrain Wheat Flour packaging" width="1280" height="720" loading="lazy" />
+        <img
+          src="assets/images/packaging.webp"
+          alt="Medgrain Wheat Flour packaging"
+          width="1280"
+          height="720"
+          loading="lazy"
+        />
       </div>
+
       <div class="product-showcase__content">
-        <span class="product-showcase__tag">Medgrain Flour</span>
-        <h3>Quality wheat flour for everyday meals and business requirements.</h3>
-        <p>Carefully selected wheat, hygienic processing and dependable supply — available in practical pack sizes.</p>
+
+        <span class="product-showcase__tag">
+          Featured Product
+        </span>
+
+        <h3>
+          Medgrain Wheat Flour
+        </h3>
+
+        <p>
+          Quality wheat flour made from carefully selected wheat with
+          hygienic processing and dependable supply for everyday meals
+          and business requirements.
+        </p>
 
         <div class="product-showcase__packs">
-          <div *ngFor="let pack of packSizes" class="pack-option">
+          <div
+            *ngFor="let pack of packSizes"
+            class="pack-option"
+          >
             <strong>{{ pack.size }}</strong>
             <span>{{ pack.use }}</span>
           </div>
         </div>
 
-        <a href="#contact" class="btn btn-primary">Enquire Now</a>
+        <a href="#contact" class="btn btn-primary">
+          Enquire Now
+        </a>
+
       </div>
+
     </article>
+
+
+    <!-- All Products -->
+    <div class="products-grid" appReveal>
+
+      <!-- Wheat Flour -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/wheatFlour.webp"
+            alt="Medgrain Wheat Flour"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Flour</span>
+
+          <h3>Wheat Flour</h3>
+
+          <p>
+            Quality wheat flour suitable for everyday cooking and
+            commercial requirements.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Maida -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/maida.webp"
+            alt="Medgrain Maida"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Flour</span>
+
+          <h3>Maida</h3>
+
+          <p>
+            Fine refined flour suitable for bakery, confectionery and
+            various food preparations.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Bajra Flour -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/bajraFlour.webp"
+            alt="Medgrain Bajra Flour"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Millet Flour</span>
+
+          <h3>Bajra Flour</h3>
+
+          <p>
+            Traditionally valued pearl millet flour for a variety of
+            Indian food preparations.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Jowar Flour -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/jowarFlour.webp"
+            alt="Medgrain Jowar Flour"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Millet Flour</span>
+
+          <h3>Jowar Flour</h3>
+
+          <p>
+            Quality sorghum flour suitable for traditional and modern
+            recipes.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Corn Flour -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/cornFlour.webp"
+            alt="Medgrain Corn Flour"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Flour</span>
+
+          <h3>Corn Flour</h3>
+
+          <p>
+            Versatile corn-based flour for food preparation and
+            commercial applications.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Multigrain Flour -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/multigrainFlour.webp"
+            alt="Medgrain Multigrain Flour"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Flour</span>
+
+          <h3>Multigrain Flour</h3>
+
+          <p>
+            A carefully prepared blend of multiple grains for varied
+            everyday food applications.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Wheat Bran -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/wheatBran.webp"
+            alt="Medgrain Wheat Bran"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Grain Product</span>
+
+          <h3>Wheat Bran</h3>
+
+          <p>
+            Carefully processed wheat bran suitable for food and
+            other commercial applications.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Makka Papad -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/makkaPapad.webp"
+            alt="Medgrain Makka Papad"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Food Product</span>
+
+          <h3>Makka Papad</h3>
+
+          <p>
+            Traditional corn-based papad suitable for retail and
+            everyday food use.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+
+      <!-- Spices -->
+      <article class="product-card">
+
+        <div class="product-card__image">
+          <img
+            src="assets/images/spices.webp"
+            alt="Medgrain Spices"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-card__content">
+          <span class="product-card__category">Spices</span>
+
+          <h3>Spices</h3>
+
+          <p>
+            Selected spices for everyday cooking, retail and
+            commercial food requirements.
+          </p>
+
+          <a href="#contact" class="product-card__link">
+            Enquire Now →
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- Business Enquiry -->
+    <div class="products-business-cta" appReveal>
+
+      <div>
+        <span class="eyebrow">For Business & Bulk Requirements</span>
+
+        <h3>
+          Looking for wholesale, retail or bulk supply?
+        </h3>
+
+        <p>
+          Connect with our team for product availability, pack sizes,
+          distribution and bulk requirements.
+        </p>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">
+        Contact Us
+      </a>
+
+    </div>
+
   </div>
-</section>
+  </section>
