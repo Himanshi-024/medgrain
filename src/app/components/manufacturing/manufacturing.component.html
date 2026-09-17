@@ -20,47 +20,399 @@
 </section> -->
 
 <section id="manufacturing" class="section manufacturing">
+
   <div class="container">
+
+    <!-- ============================= -->
+    <!-- SECTION HEADING -->
+    <!-- ============================= -->
+
     <div class="section-head section-head--light" appReveal>
-      <p class="eyebrow eyebrow--light">Quality &amp; Manufacturing</p>
-      <h2>From grain to pack, every stage matters</h2>
-      <p>
-        At Medgrain, quality begins at the manufacturing stage. We follow a systematic process
-        with a focus on responsible handling, hygiene, consistency and dependable supply.
+
+      <p class="eyebrow eyebrow--light">
+        Quality &amp; Manufacturing
       </p>
+
+      <h2>
+        From grain to pack, every stage matters
+      </h2>
+
+      <p>
+        At Medgrain, quality begins at the manufacturing stage. We follow
+        systematic processes with a focus on responsible handling, hygiene,
+        consistency and dependable supply.
+      </p>
+
     </div>
+
+
+    <!-- ============================= -->
+    <!-- QUALITY COMMITMENT -->
+    <!-- ============================= -->
 
     <div class="quality-commitment" appReveal>
-      <div class="quality-commitment__icon">✓</div>
+
+      <div class="quality-commitment__icon">
+        ✓
+      </div>
+
       <div>
-        <p class="quality-commitment__eyebrow">Our Quality Commitment</p>
-        <h3>Quality Is Built Into Our Process</h3>
+
+        <p class="quality-commitment__eyebrow">
+          Our Quality Commitment
+        </p>
+
+        <h3>
+          Quality Is Built Into Our Process
+        </h3>
+
         <p>
-          Our approach to quality is guided by disciplined processes, careful handling and continuous
-          improvement. From raw material selection to processing, packing and dispatch, we focus on
+          Our approach to quality is guided by disciplined processes,
+          careful handling and continuous improvement. From raw material
+          selection to processing, packing and dispatch, we focus on
           consistency and responsible manufacturing practices.
         </p>
+
       </div>
+
     </div>
+
+
+    <!-- ============================= -->
+    <!-- MANUFACTURING PROCESS -->
+    <!-- ============================= -->
 
     <div class="process-heading" appReveal>
-      <p class="eyebrow eyebrow--light">Our Manufacturing &amp; Quality Process</p>
-      <p class="process-heading__note">A clear journey from selected wheat to finished product.</p>
+
+      <p class="eyebrow eyebrow--light">
+        Our Manufacturing &amp; Quality Process
+      </p>
+
+      <p class="process-heading__note">
+        A clear journey from selected grains to finished products.
+      </p>
+
     </div>
+
 
     <ol class="journey">
-      <li class="journey__step" *ngFor="let step of steps; let i = index" [appReveal]="i * 100">
-        <span class="journey__dot">{{ i + 1 }}</span>
-        <span class="journey__label">{{ step }}</span>
+
+      <li
+        class="journey__step"
+        *ngFor="let step of steps; let i = index"
+        [appReveal]="i * 100"
+      >
+
+        <span class="journey__dot">
+          {{ i + 1 }}
+        </span>
+
+        <span class="journey__label">
+          {{ step }}
+        </span>
+
       </li>
+
     </ol>
 
-    <div class="compliance-note" appReveal>
-      <div>
-        <strong>Food Safety &amp; Compliance</strong>
-        <p>FSSAI licence details can be displayed here once the verified licence number is provided.</p>
+
+    <!-- ============================= -->
+    <!-- FACTORY / FACILITY -->
+    <!-- ============================= -->
+
+    <div class="factory-section">
+
+      <div
+        class="factory-section__heading"
+        appReveal
+      >
+
+        <div>
+
+          <p class="eyebrow eyebrow--light">
+            Our Manufacturing Facility
+          </p>
+
+          <h3>
+            Inside our manufacturing facility
+          </h3>
+
+          <p>
+            A closer look at our manufacturing environment, processing
+            equipment and facility operations.
+          </p>
+
+        </div>
+
+        <span class="factory-section__badge">
+          Manufacturing Facility
+        </span>
+
       </div>
-      <span>FSSAI</span>
+
+
+      <!-- Factory Image Gallery -->
+
+      <div class="factory-gallery">
+
+        <article
+          class="factory-card"
+          *ngFor="let factory of factoryImages; let i = index"
+          [appReveal]="i * 100"
+        >
+
+          <div class="factory-card__image">
+
+            <img
+              [src]="factory.image"
+              [alt]="factory.alt"
+              loading="lazy"
+            />
+
+            <div class="factory-card__overlay">
+
+              <span>
+                {{ factory.number }}
+              </span>
+
+              <strong>
+                {{ factory.title }}
+              </strong>
+
+            </div>
+
+          </div>
+
+          <div class="factory-card__content">
+
+            <span>
+              {{ factory.category }}
+            </span>
+
+            <h4>
+              {{ factory.title }}
+            </h4>
+
+            <p>
+              {{ factory.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
+
+
+    <!-- ============================= -->
+    <!-- CERTIFICATES -->
+    <!-- ============================= -->
+
+    <div class="certificates-section">
+
+      <div
+        class="certificates-section__heading"
+        appReveal
+      >
+
+        <p class="eyebrow eyebrow--light">
+          Certifications &amp; Compliance
+        </p>
+
+        <h3>
+          Our compliance documentation
+        </h3>
+
+        <p>
+          We maintain relevant food safety and regulatory documentation
+          for our manufacturing operations.
+        </p>
+
+      </div>
+
+
+      <div class="certificates-grid">
+
+        <!-- FSSAI -->
+
+        <article
+          class="certificate-card"
+          appReveal
+        >
+
+          <div class="certificate-card__icon">
+            ✓
+          </div>
+
+          <div class="certificate-card__content">
+
+            <span class="certificate-card__label">
+              Food Safety
+            </span>
+
+            <h4>
+              FSSAI State License
+            </h4>
+
+            <p>
+              License Number:
+              <strong>11426035000025</strong>
+            </p>
+
+            <div class="certificate-card__details">
+
+              <span>
+                <small>Business Type</small>
+                Manufacturer - General Manufacturing
+              </span>
+
+              <span>
+                <small>Validity</small>
+                15 Mar 2026 – 14 Mar 2031
+              </span>
+
+              <span>
+                <small>Location</small>
+                Betul, Madhya Pradesh
+              </span>
+
+            </div>
+
+            <a
+              href="assets/certificates/fssai-license.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="certificate-card__link"
+            >
+              View FSSAI License →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- DOCUMENTATION CARD -->
+
+        <article
+          class="certificate-info-card"
+          appReveal
+        >
+
+          <div class="certificate-info-card__number">
+            01
+          </div>
+
+          <div>
+
+            <span class="certificate-card__label">
+              Compliance
+            </span>
+
+            <h4>
+              Food Safety &amp; Manufacturing Practices
+            </h4>
+
+            <p>
+              Our manufacturing operations are supported by documented
+              food safety, hygiene and production practices.
+            </p>
+
+            <ul>
+
+              <li>
+                Responsible raw material handling
+              </li>
+
+              <li>
+                Hygienic manufacturing practices
+              </li>
+
+              <li>
+                Controlled processing and packing
+              </li>
+
+              <li>
+                Food safety documentation
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- COMPLIANCE NOTE -->
+    <!-- ============================= -->
+
+    <div
+      class="compliance-note"
+      appReveal
+    >
+
+      <div>
+
+        <strong>
+          Food Safety &amp; Compliance
+        </strong>
+
+        <p>
+          Our FSSAI State License is maintained as part of our food
+          manufacturing compliance documentation.
+        </p>
+
+      </div>
+
+      <span>
+        FSSAI
+      </span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- BUSINESS CTA -->
+    <!-- ============================= -->
+
+    <div
+      class="manufacturing-cta"
+      appReveal
+    >
+
+      <div>
+
+        <p class="eyebrow eyebrow--light">
+          For Business &amp; Bulk Requirements
+        </p>
+
+        <h3>
+          Looking for dependable manufacturing and supply?
+        </h3>
+
+        <p>
+          Connect with our team for product availability, distribution,
+          retail and bulk requirements.
+        </p>
+
+      </div>
+
+      <a
+        href="#contact"
+        class="btn btn-primary"
+      >
+        Contact Us
+      </a>
+
+    </div>
+
   </div>
+
 </section>
