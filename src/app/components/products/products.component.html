@@ -134,376 +134,312 @@
   </div>
 </section> -->
 
-
 <section id="products" class="section products">
   <div class="container">
 
-    <!-- Section Heading -->
-    <div class="section-head" appReveal>
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
+    <div class="section-head products-head" appReveal>
+
       <p class="eyebrow">Our Products</p>
 
-      <h2>Quality Products for Every Requirement</h2>
+      <h2>
+        Quality Products for Every Requirement
+      </h2>
 
       <p>
-        Explore our range of carefully selected flour, grain and food products
-        for households, retail, wholesale, institutional and bulk requirements.
+        Explore the Medgrain range of carefully selected flour, grain,
+        food and spice products for households, retailers, wholesalers,
+        institutions and bulk buyers.
       </p>
+
     </div>
 
 
-    <!-- Featured Product -->
-    <article class="product-showcase" appReveal>
+    <!-- =========================
+         PRODUCT CAROUSEL
+    ========================== -->
+    <div
+      class="product-carousel"
+      appReveal
+      (mouseenter)="pauseAutoSlide()"
+      (mouseleave)="startAutoSlide()"
+    >
 
-      <div class="product-showcase__image">
-        <img
-          src="assets/images/packaging.webp"
-          alt="Medgrain Wheat Flour packaging"
-          width="1280"
-          height="720"
-          loading="lazy"
-        />
+      <!-- Previous Button -->
+      <button
+        type="button"
+        class="carousel-arrow carousel-arrow--prev"
+        (click)="previousProduct()"
+        aria-label="Previous product"
+      >
+        <span>‹</span>
+      </button>
+
+
+      <!-- Carousel Viewport -->
+      <div class="product-carousel__viewport">
+
+        <!-- Slides -->
+        <div
+          class="product-carousel__track"
+          [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'"
+        >
+
+          <article
+            class="product-slide"
+            *ngFor="let product of products"
+          >
+
+            <!-- Product Image -->
+            <div class="product-slide__image">
+
+              <div class="product-slide__image-bg"></div>
+
+              <img
+                [src]="product.image"
+                [alt]="product.name"
+                width="700"
+                height="700"
+                loading="lazy"
+              />
+
+            </div>
+
+
+            <!-- Product Information -->
+            <div class="product-slide__content">
+
+              <span class="product-slide__category">
+                {{ product.category }}
+              </span>
+
+              <h3>
+                {{ product.name }}
+              </h3>
+
+              <p class="product-slide__description">
+                {{ product.description }}
+              </p>
+
+
+              <!-- Product Highlights -->
+              <div class="product-highlights">
+
+                <div class="product-highlight">
+                  <span class="product-highlight__icon">✓</span>
+
+                  <div>
+                    <strong>Quality Focus</strong>
+                    <span>{{ product.quality }}</span>
+                  </div>
+                </div>
+
+
+                <div class="product-highlight">
+                  <span class="product-highlight__icon">✓</span>
+
+                  <div>
+                    <strong>Suitable For</strong>
+                    <span>{{ product.suitableFor }}</span>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!-- Packaging -->
+              <div class="product-packaging">
+
+                <div class="product-packaging__heading">
+
+                  <div>
+                    <span class="product-packaging__eyebrow">
+                      Packaging
+                    </span>
+
+                    <h4>
+                      Available Pack Options
+                    </h4>
+                  </div>
+
+                  <span class="product-packaging__box-icon">
+                    □
+                  </span>
+
+                </div>
+
+
+                <div class="packaging-options">
+
+                  <span
+                    class="packaging-option"
+                    *ngFor="let pack of product.packaging"
+                  >
+                    {{ pack }}
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <!-- Enquiry Button -->
+              <a
+                href="#contact"
+                class="btn btn-primary product-slide__button"
+              >
+                Enquire About {{ product.name }}
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
       </div>
 
-      <div class="product-showcase__content">
 
-        <span class="product-showcase__tag">
-          Featured Product
+      <!-- Next Button -->
+      <button
+        type="button"
+        class="carousel-arrow carousel-arrow--next"
+        (click)="nextProduct()"
+        aria-label="Next product"
+      >
+        <span>›</span>
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         DOT NAVIGATION
+    ========================== -->
+    <div
+      class="product-dots"
+      aria-label="Product navigation"
+    >
+
+      <button
+        type="button"
+        *ngFor="let product of products; let i = index"
+        class="product-dot"
+        [class.active]="currentIndex === i"
+        [attr.aria-label]="'View ' + product.name"
+        [attr.aria-current]="currentIndex === i ? 'true' : null"
+        (click)="goToProduct(i)"
+      >
+      </button>
+
+    </div>
+
+
+    <!-- Current Product Counter -->
+    <div class="product-counter">
+
+      <span>
+        {{ currentIndex + 1 | number:'2.0' }}
+      </span>
+
+      <div class="product-counter__line"></div>
+
+      <span>
+        {{ products.length | number:'2.0' }}
+      </span>
+
+    </div>
+
+
+    <!-- =========================
+         PACKAGING INFORMATION
+    ========================== -->
+    <div class="packaging-info" appReveal>
+
+      <div class="packaging-info__content">
+
+        <span class="eyebrow">
+          Packaging & Supply
         </span>
 
         <h3>
-          Medgrain Wheat Flour
+          Packaging options for different requirements
         </h3>
 
         <p>
-          Quality wheat flour made from carefully selected wheat with
-          hygienic processing and dependable supply for everyday meals
-          and business requirements.
+          Medgrain products can be presented for household, retail,
+          wholesale, institutional and bulk requirements. Contact our
+          team for product-specific pack sizes, availability and supply
+          requirements.
         </p>
-
-        <div class="product-showcase__packs">
-          <div
-            *ngFor="let pack of packSizes"
-            class="pack-option"
-          >
-            <strong>{{ pack.size }}</strong>
-            <span>{{ pack.use }}</span>
-          </div>
-        </div>
-
-        <a href="#contact" class="btn btn-primary">
-          Enquire Now
-        </a>
 
       </div>
 
-    </article>
 
+      <div class="packaging-info__sizes">
 
-    <!-- All Products -->
-    <div class="products-grid" appReveal>
-
-      <!-- Wheat Flour -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/wheatFlour.webp"
-            alt="Medgrain Wheat Flour"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
+        <div class="packaging-info__size">
+          <strong>5 KG</strong>
+          <span>Household & Retail</span>
         </div>
 
-        <div class="product-card__content">
-          <span class="product-card__category">Flour</span>
-
-          <h3>Wheat Flour</h3>
-
-          <p>
-            Quality wheat flour suitable for everyday cooking and
-            commercial requirements.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
+        <div class="packaging-info__size">
+          <strong>10 KG</strong>
+          <span>Household & Retail</span>
         </div>
 
-      </article>
-
-
-      <!-- Maida -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/maida.webp"
-            alt="Medgrain Maida"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
+        <div class="packaging-info__size">
+          <strong>26 KG</strong>
+          <span>Retail & Wholesale</span>
         </div>
 
-        <div class="product-card__content">
-          <span class="product-card__category">Flour</span>
-
-          <h3>Maida</h3>
-
-          <p>
-            Fine refined flour suitable for bakery, confectionery and
-            various food preparations.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
+        <div class="packaging-info__size">
+          <strong>30 KG</strong>
+          <span>Wholesale & Bulk</span>
         </div>
 
-      </article>
-
-
-      <!-- Bajra Flour -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/bajraFlour.webp"
-            alt="Medgrain Bajra Flour"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
+        <div class="packaging-info__size">
+          <strong>50 KG</strong>
+          <span>Bulk & Institutional</span>
         </div>
 
-        <div class="product-card__content">
-          <span class="product-card__category">Millet Flour</span>
-
-          <h3>Bajra Flour</h3>
-
-          <p>
-            Traditionally valued pearl millet flour for a variety of
-            Indian food preparations.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Jowar Flour -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/jowarFlour.webp"
-            alt="Medgrain Jowar Flour"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Millet Flour</span>
-
-          <h3>Jowar Flour</h3>
-
-          <p>
-            Quality sorghum flour suitable for traditional and modern
-            recipes.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Corn Flour -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/cornFlour.webp"
-            alt="Medgrain Corn Flour"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Flour</span>
-
-          <h3>Corn Flour</h3>
-
-          <p>
-            Versatile corn-based flour for food preparation and
-            commercial applications.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Multigrain Flour -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/multigrainFlour.webp"
-            alt="Medgrain Multigrain Flour"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Flour</span>
-
-          <h3>Multigrain Flour</h3>
-
-          <p>
-            A carefully prepared blend of multiple grains for varied
-            everyday food applications.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Wheat Bran -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/wheatBran.webp"
-            alt="Medgrain Wheat Bran"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Grain Product</span>
-
-          <h3>Wheat Bran</h3>
-
-          <p>
-            Carefully processed wheat bran suitable for food and
-            other commercial applications.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Makka Papad -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/makkaPapad.webp"
-            alt="Medgrain Makka Papad"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Food Product</span>
-
-          <h3>Makka Papad</h3>
-
-          <p>
-            Traditional corn-based papad suitable for retail and
-            everyday food use.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Spices -->
-      <article class="product-card">
-
-        <div class="product-card__image">
-          <img
-            src="assets/images/spices.webp"
-            alt="Medgrain Spices"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="product-card__content">
-          <span class="product-card__category">Spices</span>
-
-          <h3>Spices</h3>
-
-          <p>
-            Selected spices for everyday cooking, retail and
-            commercial food requirements.
-          </p>
-
-          <a href="#contact" class="product-card__link">
-            Enquire Now →
-          </a>
-        </div>
-
-      </article>
+      </div>
 
     </div>
 
 
-    <!-- Business Enquiry -->
+    <!-- =========================
+         BUSINESS CTA
+    ========================== -->
     <div class="products-business-cta" appReveal>
 
       <div>
-        <span class="eyebrow">For Business & Bulk Requirements</span>
+
+        <span class="eyebrow">
+          For Business & Bulk Requirements
+        </span>
 
         <h3>
           Looking for wholesale, retail or bulk supply?
         </h3>
 
         <p>
-          Connect with our team for product availability, pack sizes,
+          Connect with our team for product availability, packaging,
           distribution and bulk requirements.
         </p>
+
       </div>
 
-      <a href="#contact" class="btn btn-primary">
+      <a
+        href="#contact"
+        class="btn btn-primary"
+      >
         Contact Us
       </a>
 
     </div>
 
   </div>
-  </section>
+</section>
