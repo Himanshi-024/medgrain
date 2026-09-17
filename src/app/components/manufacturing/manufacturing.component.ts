@@ -32,12 +32,11 @@ export class ManufacturingComponent {
     'Storage & Dispatch'
   ];
 
-
   factoryImages: FactoryImage[] = [
 
     {
       image: 'assets/images/factory-1.jpg',
-      alt: 'Medgrain manufacturing facility and flour processing equipment',
+      alt: 'Medgrain flour manufacturing and processing equipment',
       number: '01',
       title: 'Processing Equipment',
       category: 'Manufacturing',
@@ -47,7 +46,7 @@ export class ManufacturingComponent {
 
     {
       image: 'assets/images/factory-2.jpg',
-      alt: 'Flour processing machinery inside manufacturing facility',
+      alt: 'Medgrain flour processing machinery',
       number: '02',
       title: 'Flour Processing Line',
       category: 'Production',
@@ -57,7 +56,7 @@ export class ManufacturingComponent {
 
     {
       image: 'assets/images/factory-3.jpg',
-      alt: 'Industrial flour manufacturing machinery',
+      alt: 'Medgrain industrial flour manufacturing machinery',
       number: '03',
       title: 'Production Operations',
       category: 'Plant Operations',
