@@ -261,28 +261,372 @@
 
 
 
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { RevealDirective } from '../../shared/reveal.directive';
 
-interface PackSize {
-  size: string;
-  use: string;
+
+interface Product {
+  name: string;
+  category: string;
+  image: string;
+  description: string;
+  quality: string;
+  suitableFor: string;
+  packaging: string[];
 }
+
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, RevealDirective],
+  imports: [
+    CommonModule,
+    RevealDirective
+  ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
-export class ProductsComponent {
-  packSizes: PackSize[] = [
-    { size: '5 KG', use: 'Household & retail customers' },
-    { size: '10 KG', use: 'Household & retail customers' },
-    { size: '26 KG', use: 'Retailers, wholesalers & bulk buyers' },
-    { size: '30 KG', use: 'Retailers, wholesalers & bulk buyers' },
-    { size: '50 KG', use: 'Bulk, institutional & commercial requirements' },
+export class ProductsComponent implements OnInit, OnDestroy {
+
+  currentIndex = 0;
+
+  private autoSlideInterval: ReturnType<typeof setInterval> | null = null;
+
+
+  /*
+   * ==========================================
+   * PRODUCT LIST
+   * ==========================================
+   */
+
+  products: Product[] = [
+
+    {
+      name: 'Wheat Flour',
+      category: 'Flour',
+
+      image: 'assets/images/wheatFlour.webp',
+
+      description:
+        'Quality wheat flour made from carefully selected wheat with hygienic processing and dependable supply for everyday meals and business requirements.',
+
+      quality:
+        'Carefully selected wheat',
+
+      suitableFor:
+        'Households, retailers & bulk buyers',
+
+      packaging: [
+        '5 KG',
+        '10 KG',
+        '26 KG',
+        '30 KG',
+        '50 KG'
+      ]
+    },
+
+
+    {
+      name: 'Maida',
+      category: 'Flour',
+
+      image: 'assets/images/maida.webp',
+
+      description:
+        'Fine refined flour suitable for bakery, confectionery and a variety of food preparation requirements.',
+
+      quality:
+        'Fine refined flour',
+
+      suitableFor:
+        'Bakery, food service & retail',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Bajra Flour',
+      category: 'Millet Flour',
+
+      image: 'assets/images/bajraFlour.webp',
+
+      description:
+        'Pearl millet flour suitable for traditional Indian preparations and a variety of everyday food applications.',
+
+      quality:
+        'Selected pearl millet',
+
+      suitableFor:
+        'Households, retail & food businesses',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Jowar Flour',
+      category: 'Millet Flour',
+
+      image: 'assets/images/jowarFlour.webp',
+
+      description:
+        'Quality sorghum flour suitable for traditional recipes and modern food preparation requirements.',
+
+      quality:
+        'Selected sorghum grain',
+
+      suitableFor:
+        'Households, retail & food businesses',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Corn Flour',
+      category: 'Flour',
+
+      image: 'assets/images/cornFlour.webp',
+
+      description:
+        'Versatile corn-based flour suitable for food preparation and a range of commercial applications.',
+
+      quality:
+        'Carefully processed corn',
+
+      suitableFor:
+        'Households, retail & food businesses',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Multigrain Flour',
+      category: 'Flour',
+
+      image: 'assets/images/multigrainFlour.webp',
+
+      description:
+        'A carefully prepared blend of multiple grains designed for varied everyday food applications.',
+
+      quality:
+        'Multi-grain blend',
+
+      suitableFor:
+        'Households, retail & health-focused food businesses',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Wheat Bran',
+      category: 'Grain Product',
+
+      image: 'assets/images/wheatBran.webp',
+
+      description:
+        'Carefully processed wheat bran suitable for food and other commercial applications.',
+
+      quality:
+        'Processed wheat bran',
+
+      suitableFor:
+        'Food businesses & bulk buyers',
+
+      packaging: [
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Institutional',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Makka Papad',
+      category: 'Food Product',
+
+      image: 'assets/images/makkaPapad.webp',
+
+      description:
+        'Traditional corn-based papad suitable for retail, household and everyday food use.',
+
+      quality:
+        'Corn-based food product',
+
+      suitableFor:
+        'Households, retailers & distributors',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    },
+
+
+    {
+      name: 'Spices',
+      category: 'Spices',
+
+      image: 'assets/images/spices.webp',
+
+      description:
+        'Selected spices for everyday cooking, retail requirements and commercial food applications.',
+
+      quality:
+        'Selected spice products',
+
+      suitableFor:
+        'Households, retailers & food businesses',
+
+      packaging: [
+        'Retail Packs',
+        'Wholesale Packs',
+        'Bulk Packs',
+        'Custom Requirement'
+      ]
+    }
+
   ];
+
+
+  /*
+   * ==========================================
+   * LIFECYCLE
+   * ==========================================
+   */
+
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
+  }
+
+
+  /*
+   * ==========================================
+   * NEXT PRODUCT
+   * ==========================================
+   */
+
+  nextProduct(): void {
+
+    this.currentIndex =
+      (this.currentIndex + 1) % this.products.length;
+
+    this.restartAutoSlide();
+  }
+
+
+  /*
+   * ==========================================
+   * PREVIOUS PRODUCT
+   * ==========================================
+   */
+
+  previousProduct(): void {
+
+    this.currentIndex =
+      this.currentIndex === 0
+        ? this.products.length - 1
+        : this.currentIndex - 1;
+
+    this.restartAutoSlide();
+  }
+
+
+  /*
+   * ==========================================
+   * GO TO PRODUCT
+   * ==========================================
+   */
+
+  goToProduct(index: number): void {
+
+    this.currentIndex = index;
+
+    this.restartAutoSlide();
+  }
+
+
+  /*
+   * ==========================================
+   * AUTO SLIDE
+   * ==========================================
+   */
+
+  startAutoSlide(): void {
+
+    this.stopAutoSlide();
+
+    this.autoSlideInterval = setInterval(() => {
+
+      this.currentIndex =
+        (this.currentIndex + 1) % this.products.length;
+
+    }, 5000);
+  }
+
+
+  pauseAutoSlide(): void {
+    this.stopAutoSlide();
+  }
+
+
+  restartAutoSlide(): void {
+
+    this.stopAutoSlide();
+    this.startAutoSlide();
+  }
+
+
+  stopAutoSlide(): void {
+
+    if (this.autoSlideInterval) {
+
+      clearInterval(this.autoSlideInterval);
+
+      this.autoSlideInterval = null;
+    }
+  }
+
 }
